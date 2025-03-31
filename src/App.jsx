@@ -6,23 +6,27 @@ function App() {
   return (
     <div className="App">
       <Header /> {/* Render the Header component */}
-      <section id="section1" className="full-height-section">
+      <section id="Home" className="full-height-section">
         <h1>Home</h1> {/* Updated section title */}
       </section>
-      <section id="section2" className="full-height-section">
+      <section id="About" className="full-height-section">
         <h1>About</h1> {/* Updated section title */}
       </section>
-      <section id="section3" className="full-height-section">
+      <section id="Education" className="full-height-section">
         <h1>Education</h1> {/* Updated section title */}
       </section>
-      <section id="section4" className="full-height-section">
+      <section id="Projects" className="full-height-section">
         <h1>Projects</h1> {/* Updated section title */}
       </section>
-      <section id="section5" className="full-height-section">
+      <section id="Resume" className="full-height-section">
         <h1>CV</h1> {/* Updated section title */}
       </section>
-      <section id="section6" className="full-height-section">
+      <section id="Contact" className="full-height-section">
         <h1>Contact Me</h1> {/* Updated section title */}
+<<<<<<< Updated upstream
+=======
+{/* ======= */}
+>>>>>>> Stashed changes
       </section>
     </div>
   );

@@ -19,28 +19,28 @@ body, html {
 }
 
 /* Specific background colors for each section */
-#section1 {
+#Home {
   background-color: #ff6347; /* Tomato */
 }
 
-#section2 {
+#About {
   background-color: #4682b4; /* SteelBlue */
 }
 
-#section3 {
+#Education {
   background-color: #32cd32; /* LimeGreen */
 }
 
-#section4 {
+#Projects {
   background-color: #ffc0cb; /* Pink */
   color: #333; /* Darker text for light background */
 }
 
-#section5 {
+#Resume {
   background-color: #ffa500; /* Orange */
 }
 
-#section6 {
+#Contact {
   background-color: #9370db; /* MediumPurple */
 }
 
