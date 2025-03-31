@@ -1,0 +1,53 @@
+/* Reset default margin and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif; /* Basic font */
+}
+
+/* Style for each section */
+.full-height-section {
+  min-height: 100vh; /* Make section fill the viewport height */
+  /* width: 100vw; */
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  color: white; /* Default text color for sections */
+  text-align: center;
+  font-size: 2rem; /* Basic font size for section headers */
+}
+
+/* Specific background colors for each section */
+#section1 {
+  background-color: #ff6347; /* Tomato */
+}
+
+#section2 {
+  background-color: #4682b4; /* SteelBlue */
+}
+
+#section3 {
+  background-color: #32cd32; /* LimeGreen */
+}
+
+#section4 {
+  background-color: #ffc0cb; /* Pink */
+  color: #333; /* Darker text for light background */
+}
+
+#section5 {
+  background-color: #ffa500; /* Orange */
+}
+
+#section6 {
+  background-color: #9370db; /* MediumPurple */
+}
+
+/* Optional: Add some basic styling for the h1 tags inside sections */
+.full-height-section h1 {
+  margin: 0;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.1); /* Slight background for readability */
+  border-radius: 8px;
+}
