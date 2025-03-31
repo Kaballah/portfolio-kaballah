@@ -1,0 +1,41 @@
+.app-header {
+  position: fixed; /* Keep header fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Pushes logo left, nav right */
+  align-items: center;
+  padding: 1rem 2rem; /* Vertical and horizontal padding */
+  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+  color: white;
+  z-index: 1000; /* Ensure header stays on top of other content */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 1.5rem; /* Spacing between nav items */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffc0cb; /* Pink hover effect, matching section 4 */
+}
