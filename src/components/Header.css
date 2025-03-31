@@ -30,12 +30,42 @@
 }
 
 .nav-links a {
-  color: white;
+  color: rgba(255, 255, 255, 0.7); /* Dull white for default state */
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease;
+  position: relative; /* Needed for absolute positioning of pseudo-element */
+  padding-bottom: 5px; /* Add some space below the text for the line */
+}
+
+/* Style for the underline pseudo-element */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0; /* Start with no width */
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff; /* Blue color (matching section 2) */
+  transition: width 0.3s ease-in-out; /* Animate width change */
+}
+
+/* Hover effect: Animate line from left to right */
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Active state: Static underline (assuming an 'active' class is added via JS) */
+.nav-links a.active::after {
+  width: 100%;
+  transition: none; /* Make the line appear instantly for active state */
+}
+
+/* Set color to bright white for active links */
+.nav-links a.active {
+  color: #ffffff; /* Bright white */
 }
 
 .nav-links a:hover {
-  color: #ffc0cb; /* Pink hover effect, matching section 4 */
+  color: #ffffff; /* Bright white on hover */
 }
