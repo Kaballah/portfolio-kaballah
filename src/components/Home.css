@@ -1,0 +1,69 @@
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between text and image */
+    padding: 0 5%; /* Add padding on the sides */
+    background: linear-gradient(to right, rgba(47, 47, 47, 0.9), rgba(197, 198, 199, 0.9)); /* Dark Graphite to Soft Platinum */
+}
+  
+.home-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.home-text {
+    flex: 1; /* Take up equal space */
+    max-width: 50%; /* Limit text width */
+    padding-right: 2rem; /* Add spacing between text and image */
+    color: var(--color-silver-mist);
+}
+  
+.home-text h1 {
+    font-size: 3rem; /* Large heading */
+    margin-bottom: 1rem;
+}
+  
+.home-text p {
+    font-size: 1.2rem; /* Paragraph font size */
+    line-height: 1.5; /* Improve readability */
+}
+  
+.home-image {
+    flex: 1; /* Take up equal space */
+    max-width: 50%; /* Limit image width */
+    text-align: right; /* Align image to the right */
+}
+  
+.home-image img {
+    max-width: 100%; /* Ensure the image scales properly */
+    /* max-width: 500px; */
+    height: 300px; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better appearance */
+    object-fit: cover;
+}
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    margin-top: 1.5rem; /* Add spacing above the button */
+    padding: 0.8rem 1.5rem; /* Button padding */
+    font-size: 1rem; /* Font size */
+    font-weight: bold;
+    color: var(--color-silver-mist); /* Silver Mist */
+    background-color: #2F2F2F; /* Dark Graphite */
+    text-decoration: none; /* Remove underline */
+    border-radius: 4px; /* Rounded corners */
+    transition: transform 0.2s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better appearance */
+}
+
+.cta-button:hover {
+    color: var(--color-silver-mist);
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
+}
+

@@ -24,33 +24,6 @@ body, html {
     font-size: 2rem; /* Basic font size for section headers */
 }
 
-<<<<<<< Updated upstream
-/* Specific background colors for each section */
-#section1 {
-  background-color: #ff6347; /* Tomato */
-}
-
-#section2 {
-  background-color: #4682b4; /* SteelBlue */
-}
-
-#section3 {
-  background-color: #32cd32; /* LimeGreen */
-}
-
-#section4 {
-  background-color: #ffc0cb; /* Pink */
-  color: #333; /* Darker text for light background */
-}
-
-#section5 {
-  background-color: #ffa500; /* Orange */
-}
-
-#section6 {
-  background-color: #9370db; /* MediumPurple */
-}
-=======
 /* Remove specific background colors for sections, use the default above */
 /* #Home { ... } */
 /* #About { ... } */
@@ -60,7 +33,6 @@ body, html {
 /* #Contact { ... } */
 /* Note: Home section background is handled in Home.css */
 /* Removed extra closing brace here */
->>>>>>> Stashed changes
 
 /* Optional: Add some basic styling for the h1 tags inside sections */
 .full-height-section h1 {
