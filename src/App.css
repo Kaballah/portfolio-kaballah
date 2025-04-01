@@ -1,23 +1,30 @@
+@font-face {
+    font-family: 'dot-matrix';
+    src: url('../assets/led_counter-7.ttf') format('truetype'), /* Super Modern Browsers */
+         
+  }
+
 /* Reset default margin and padding */
 body, html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif; /* Basic font */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'dot-matrix', sans-serif; /* Basic font */
 }
 
 /* Style for each section */
 .full-height-section {
-  min-height: 100vh; /* Make section fill the viewport height */
-  /* width: 100vw; */
-  display: flex;
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
-  color: white; /* Default text color for sections */
-  text-align: center;
-  font-size: 2rem; /* Basic font size for section headers */
+    min-height: 100vh; /* Make section fill the viewport height */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    color: var(--color-dark-graphite); /* Use dark text color */
+    background-color: var(--color-soft-platinum); /* Use soft platinum for general section background */
+    text-align: center;
+    font-size: 2rem; /* Basic font size for section headers */
 }
 
+<<<<<<< Updated upstream
 /* Specific background colors for each section */
 #section1 {
   background-color: #ff6347; /* Tomato */
@@ -43,11 +50,40 @@ body, html {
 #section6 {
   background-color: #9370db; /* MediumPurple */
 }
+=======
+/* Remove specific background colors for sections, use the default above */
+/* #Home { ... } */
+/* #About { ... } */
+/* #Education { ... } */
+/* #Projects { ... } */
+/* #Resume { ... } */
+/* #Contact { ... } */
+/* Note: Home section background is handled in Home.css */
+/* Removed extra closing brace here */
+>>>>>>> Stashed changes
 
 /* Optional: Add some basic styling for the h1 tags inside sections */
 .full-height-section h1 {
-  margin: 0;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.1); /* Slight background for readability */
-  border-radius: 8px;
+    margin: 0;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.1); /* Slight background for readability */
+    border-radius: 8px;
+}
+
+/* Vertical section for page name */
+.vertical-page-name {
+    position: fixed; /* Fixed position on the screen */
+    bottom: 0; /* Slightly above the bottom */
+    left: 10px; /* Slightly away from the left edge */
+    writing-mode: sideways-lr; /* Rotate text to go upwards */
+    text-align: center;
+    font-size: 2rem; /* Adjust font size */
+    font-weight: bold;
+    color: var(--color-dark-graphite); /* Light text on dark background */
+    background-color: var(--color-cool-pewter); /* Dark background */
+    backdrop-filter: blur(10px);
+    padding: 20px 10px 20px 10px; /* Add padding for better readability */
+    border-radius: 0; /* Rounded corners */
+    /* height: 20%; */
+    z-index: 10; /* Ensure it stays on top of other elements */
 }

@@ -1,0 +1,112 @@
+/* Contact section styles */
+.contact-section {
+    background-color: #D6E6F2; /* Ice Blue */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: #000A26; /* Deep Navy for text */
+    position: relative; /* Ensure icons are positioned relative to this section */
+    overflow: hidden; /* Prevent icons from overflowing the section */
+}
+
+.contact-container {
+    max-width: 600px;
+    width: 100%;
+    background-color: white; /* Form background */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better appearance */
+    text-align: center;
+    z-index: 1; /* Ensure the form stays above the icons */
+}
+
+.contact-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #0F52BA; /* Sapphire */
+}
+
+.contact-container p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #000A26; /* Deep Navy */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #0F52BA; /* Sapphire */
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #A6C6D8; /* Powder Blue */
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #0F52BA; /* Sapphire */
+}
+
+.submit-button {
+    background-color: #0F52BA; /* Sapphire */
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #000A26; /* Deep Navy */
+}
+
+/* Animated social media icons */
+.animated-icon {
+    position: absolute;
+    font-size: 2rem;
+    color: #0F52BA; /* Sapphire */
+    animation: fadeInOut 10s infinite; /* Fade in and out every 10 seconds */
+    transition: transform 0.3s ease;
+}
+
+.animated-icon:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+    color: #000A26; /* Deep Navy */
+}
+
+/* Fade in and out animation */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

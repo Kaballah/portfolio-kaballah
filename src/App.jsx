@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 import React from 'react';
+=======
+import React, { useState, useEffect, useRef } from 'react';
+>>>>>>> Stashed changes
 // <<<<<<< HEAD
 import Header from './components/Header'; // Import the Header component
 // =======
@@ -28,6 +32,7 @@ function App() {
       <section id="section6" className="full-height-section">
         <h1>Contact Me</h1> {/* Updated section title */}
 {/* ======= */}
+<<<<<<< Updated upstream
       </section>
       <section id="section1" className="full-height-section">
         <h1>Section 1</h1>
@@ -47,6 +52,8 @@ function App() {
       <section id="section6" className="full-height-section">
         <h1>Section 6</h1>
 {/* >>>>>>> master */}
+=======
+>>>>>>> Stashed changes
       </section>
     </div>
   );

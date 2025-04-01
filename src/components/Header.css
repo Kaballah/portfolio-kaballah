@@ -7,15 +7,17 @@
   justify-content: space-between; /* Pushes logo left, nav right */
   align-items: center;
   padding: 1rem 2rem; /* Vertical and horizontal padding */
-  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
-  color: white;
+  backdrop-filter: blur(10px);
+  color: var(--color-dark-graphite); /* Use Silver Mist for default text color (logo) */
   z-index: 1000; /* Ensure header stays on top of other content */
   box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .logo {
-  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-size: 1.8rem;
   font-weight: bold;
+  color: var(--color-silver-mist); /* Ensure logo uses the light color */
 }
 
 .nav-links {
@@ -30,9 +32,9 @@
 }
 
 .nav-links a {
-  color: rgba(255, 255, 255, 0.7); /* Dull white for default state */
+  color: var(--color-dark-graphite); /* Use Cool Pewter for default link state */
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
   transition: color 0.3s ease;
   position: relative; /* Needed for absolute positioning of pseudo-element */
   padding-bottom: 5px; /* Add some space below the text for the line */
@@ -46,7 +48,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #ffffff; /* Blue color (matching section 2) */
+  background-color: var(--color-silver-mist); /* Use Silver Mist for the underline */
   transition: width 0.3s ease-in-out; /* Animate width change */
 }
 
@@ -61,11 +63,48 @@
   transition: none; /* Make the line appear instantly for active state */
 }
 
-/* Set color to bright white for active links */
+/* Set color for active links */
 .nav-links a.active {
-  color: #ffffff; /* Bright white */
+  color: var(--color-silver-mist); /* Use Silver Mist for active links */
 }
 
 .nav-links a:hover {
-  color: #ffffff; /* Bright white on hover */
+  color: var(--color-silver-mist); /* Use Silver Mist on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack nav links vertically */
+    margin-top: 1rem; /* Add space above the nav links */
+  }
+
+  .nav-links li {
+    margin-left: 0; /* Remove left margin for stacked items */
+    margin-bottom: 1rem; /* Add space between nav items */
+  }
+}
+
+
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack nav links vertically */
+    margin-top: 1rem; /* Add space above the nav links */
+  }
+
+  .nav-links li {
+    margin-left: 0; /* Remove left margin for stacked items */
+    margin-bottom: 1rem; /* Add space between nav items */
+  }
 }
