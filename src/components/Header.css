@@ -38,6 +38,7 @@
   transition: color 0.3s ease;
   position: relative; /* Needed for absolute positioning of pseudo-element */
   padding-bottom: 5px; /* Add some space below the text for the line */
+  cursor: pointer;
 }
 
 /* Style for the underline pseudo-element */

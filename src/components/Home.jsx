@@ -41,8 +41,8 @@ function Home() {
                     <img
                         src={
                             imageVersion === 1
-                                ? '/../assets/landing-1.png'
-                                : '/../assets/landing-2.png'
+                                ? '/src/assets/landing-1.png'
+                                : '/src/assets/landing-2.png'
                         }
                         
                         alt="Home Landing Image"

@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'dot-matrix';
-    src: url('../assets/led_counter-7.ttf') format('truetype'), /* Super Modern Browsers */
+    src: url('../src/assets/led_counter-7.ttf') format('truetype'), /* Super Modern Browsers */
          
   }
 

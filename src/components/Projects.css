@@ -1,0 +1,16 @@
+.projects-section {
+  padding: 4rem 2rem; /* Add some padding */
+  min-height: 100vh; /* Ensure it takes full viewport height */
+  background: linear-gradient(to right, rgba(47, 47, 47, 0.9), rgba(197, 198, 199, 0.9));
+  color: #333; /* Adjust text color for contrast if needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.projects-section h2 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}

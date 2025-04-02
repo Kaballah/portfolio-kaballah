@@ -83,18 +83,18 @@ function Header() {
             </li>
             <li>
               <a
-                onClick={() => handleNavigation('Projects')}
-                className={activeSection === 'Projects' ? 'active' : ''}
-              >
-                Projects
-              </a>
-            </li>
-            <li>
-              <a
                 onClick={() => handleNavigation('Resume')}
                 className={activeSection === 'Resume' ? 'active' : ''}
               >
                 CV
+              </a>
+            </li>
+            <li>
+              <a
+                onClick={() => handleNavigation('Projects')}
+                className={activeSection === 'Projects' ? 'active' : ''}
+              >
+                Projects
               </a>
             </li>
             <li>
@@ -109,13 +109,7 @@ function Header() {
         </nav>
       </header>
 
-      {/* Render the sections */}
-      <Home />
-      <About />
-      {/* <Education /> */}
-      {/* <Projects /> */}
-      {/* <Resume /> */}
-      <Contact />
+      {/* Render the sections - Sections are rendered in App.jsx to avoid duplication */}
     </>
   );
 }
