@@ -37,13 +37,14 @@
 }
   
 .home-image img {
-    max-width: 100%; /* Ensure the image scales properly */
-    /* max-width: 500px; */
-    height: 300px; /* Maintain aspect ratio */
+    max-width: 500px; /* Ensure the image scales properly */
+    min-width: 500px;
+    max-height: 400px;
+    min-height: 400px;
     border-radius: 8px; /* Optional: Add rounded corners */
     transition: transform 0.3s ease, opacity 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better appearance */
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* Call to Action Button */
