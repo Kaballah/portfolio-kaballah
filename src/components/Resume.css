@@ -38,20 +38,30 @@
 }
 
 .download-button {
+  /* Positioning from original */
   position: absolute;
-  top: 40%; /* Vertically center within resume-container */
-  right: 1rem;
-  transform: translateY(-50%); /* Fine-tune vertical centering */
-  padding: 0.75rem 1.5rem;
-  background-color: var(--color-silver-mist);
-  color: var(--color-dark-graphite);
+  top: 40%;
+  right: 3rem;
+  transform: translateY(-50%);
+
+  /* Styles copied from .cta-button */
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-silver-mist);
+  background-color: var(--color-dark-graphite);
+  text-decoration: none;
   border: none;
-  border-radius: 0;
+  border-radius: 4px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
   animation: floatButton 3s ease-in-out infinite; /* Add floating animation */
-  white-space: pre-line;
   text-align: center;
+
+  /* Kept from original for line break */
+  white-space: pre-line;
   box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.3); /* Add shadow */
 }
 
@@ -61,8 +71,14 @@
 }
 
 .download-button:hover {
-  background-color: var(--color-cool-pewter);
+  /* Hover styles copied from .cta-button:hover */
+  color: var(--color-silver-mist); /* Ensure text color remains */
+  /* Combine transforms: original positioning + hover scale */
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
+
+/* Removed floating animation */
 
 @keyframes floatButton {
   0% {
@@ -75,3 +91,4 @@
     transform: translateY(0);
   }
 }
+
