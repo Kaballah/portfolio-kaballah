@@ -1,0 +1,77 @@
+.resume-container {
+  /* background: linear-gradient(to right, rgba(47, 47, 47, 0.9), rgba(197, 198, 199, 0.9)); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden; /* Prevent container scroll */
+  position: relative;
+}
+
+.resume-container h2 {
+  margin-bottom: 1rem;
+  color: var(--color-silver-mist);
+}
+
+.resume-container iframe {
+  border: none;
+  
+  height: 100%; /* Adjust height as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better appearance */
+  overflow: hidden; /* Hide iframe scrollbar */
+}
+
+.resume-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resume-container {
+  position: relative; /* To contain absolute positioned button */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Stretch items to full width */
+  width: 100%; /* Take full width of parent section */
+}
+
+.download-button {
+  position: absolute;
+  top: 40%; /* Vertically center within resume-container */
+  right: 1rem;
+  transform: translateY(-50%); /* Fine-tune vertical centering */
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-silver-mist);
+  color: var(--color-dark-graphite);
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  animation: floatButton 3s ease-in-out infinite; /* Add floating animation */
+  white-space: pre-line;
+  text-align: center;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.3); /* Add shadow */
+}
+
+.download-button:hover,
+.download-button:focus { /* Stop animation on hover or focus */
+  animation-play-state: paused;
+}
+
+.download-button:hover {
+  background-color: var(--color-cool-pewter);
+}
+
+@keyframes floatButton {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
