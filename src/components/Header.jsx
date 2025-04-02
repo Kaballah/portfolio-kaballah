@@ -42,7 +42,7 @@ function Header() {
 
     if (section) {
       window.scrollTo({
-        top: section.offsetTop - headerHeight, // Scroll to the section with offset for the header
+        top: section.offsetTop , // Scroll to the section with offset for the header
         behavior: 'smooth', // Smooth scrolling
       });
 

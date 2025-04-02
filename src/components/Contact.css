@@ -8,6 +8,7 @@
     color: var(--color-dark-graphite); /* Deep Navy for text */
     position: relative;
     padding: 0;
+    padding-top: 40px;
   }
   
   .contact-container {

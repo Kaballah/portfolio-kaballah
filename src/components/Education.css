@@ -1,3 +1,135 @@
 .education-section {
+    padding-top: 80px;
     background: linear-gradient(to right, rgba(47, 47, 47, 0.9), rgba(197, 198, 199, 0.9)); /* Dark Graphite to Soft Platinum */
-}
+    display: flex;
+    height: calc(100vh - 80px); /* Full height minus header */
+    background-color: var(--color-soft-platinum);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Tabs Section */
+  .tabs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .tab {
+    width: 200px;
+    height: 50px;
+    background-color: var(--color-cool-pewter);
+    color: var(--color-silver-mist);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    transform: translateX(-50px); /* Tucked into the edge */
+  }
+  
+  .tab.active {
+    transform: translateX(0); /* Fully visible */
+    background-color: var(--color-dark-graphite);
+  }
+  
+  .tab.hovered {
+    transform: translateX(0); /* Fully visible on hover */
+    background-color: var(--color-dark-graphite);
+  }
+  
+  .tab:hover {
+    transform: translateX(0); /* Fully visible on hover */
+  }
+
+  .text-area-container {
+    flex: 2;
+    display: flex;
+    padding-right: 10vw;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden; /* Ensure text doesn't overflow */
+    height: 100%; /* Full height of the section */
+  }
+  
+  /* Text Area Section */
+  .text-area {
+    /* position: absolute; */
+    width: 90%; /* Adjust width as needed */
+    color: var(--color-silver-mist);
+    font-size: 1.2rem;
+    text-align: center;
+    animation: scrollText 15s linear infinite; /* Infinite scrolling animation */
+    transform-origin: bottom center; /* Set the origin for diagonal scrolling */
+  }
+
+  .text-area.blurred {
+    filter: blur(5px); /* Blur effect when hovered over tabs */
+    animation-play-state: paused;
+  }
+  
+  .text-area:hover {
+    animation-play-state: paused; /* Pause animation on hover */
+  }
+  
+  /* @keyframes scrollText {
+    0% {
+      transform: translateY(100%);
+    }
+    20% {
+      transform: translateY(66%);
+    }
+    40% {
+      transform: translateY(33%);
+    }
+    60% {
+      transform: translateY(0%);
+    }
+    80% {
+      transform: translateY(-33%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  } */
+  
+  .text-area.blurred {
+    filter: blur(5px); /* Blur effect on hover */
+  }
+  
+  /* Image Showcase Section */
+  .image-showcase {
+    flex: 1;
+    display: flex;
+    padding-right: 3rem;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    height: 100%; /* Full height of the section */
+  }
+  
+  .image-showcase img {
+    /* position: absolute; */
+    width: 100%; /* Standardize image size */
+    height: 60%; /* Standardize image size */
+    object-fit: cover; /* Ensure the image covers the circle */
+     /* Clip the image to fit inside the circle */
+    z-index: 2; /* Ensure the image is above the circle border */
+    transition: transform 0.3s ease;
+    filter: grayscale(100%);
+  }
+  
+  .image-showcase.scaled img {
+    transform: scale(1.1); /* Scale up the image on hover */
+  }
