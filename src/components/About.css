@@ -1,0 +1,135 @@
+/* About Section */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  /* background-color: var(--color-soft-platinum); */
+  overflow: hidden;
+  position: relative;
+  padding-top: 10px;
+}
+
+/* Left and Right Backgrounds */
+.about-section::before,
+.about-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%; /* Each side takes half the width */
+  z-index: 0; /* Place behind content */
+}
+
+.about-section::before {
+  left: 0;
+  background-color: var(--color-cool-pewter); /* Dark background for the left side */
+}
+
+.about-section::after {
+  right: 0;
+  background-color: var(--color-soft-platinum); /* Light background for the right side */
+}
+
+/* First and Second Sections */
+.about-interests-container {
+  display: flex;
+  flex: 3; /* Occupy 3/4 of the page height */
+  position: relative;
+  z-index: 1;
+}
+
+.about,
+.interests {
+  flex: 1; /* Split the container vertically */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: flex-start; */
+  font-size: 1rem;
+}
+
+.about {
+  align-items: flex-start; /* Align content to the left */
+  text-align: right;
+  /* background-color: var(--color-cool-pewter); */
+  color: var(--color-silver-mist);
+}
+
+.interests {
+  align-items: flex-start; /* Align content to the left */
+  text-align: left;
+  /* background-color: var(--color-dark-graphite); */
+  color: var(--color-dark-graphite);
+}
+
+/* Third Section: Languages and Frameworks */
+/* Third Section: Languages and Frameworks */
+.languages-frameworks {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: flex-start; /* Center content vertically */
+  position: relative;
+  z-index: 1;
+  gap: 2rem;
+  padding: 0 1rem 2rem 1rem; /* Add some padding around the grid */
+}
+
+.languages-container {
+  flex: 1; /* Take up equal space */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align content to the left */
+  justify-content: flex-start;
+  color: var(--color-silver-mist); /* Light color for the left section */
+}
+
+.frameworks-container {
+  flex: 1; /* Take up equal space */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left */
+  justify-content: flex-start;
+  color: var(--color-dark-graphite); /* Dark color for the right section */
+}
+
+.icon-grid {
+  display: flex; /* Use flexbox for grid layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 2rem; /* Spacing between grid items */
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.icon-item.left {
+    color: var(--color-silver-mist); /* Style for icons on the left if needed */
+}
+
+.icon-item:hover {
+  opacity: 1;
+  cursor: pointer;
+  animation: float 2s infinite alternate; /* Apply floating animation on hover */
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(-1px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+.icon-item span {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
