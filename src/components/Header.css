@@ -241,3 +241,13 @@
     font-size: 0.9rem; /* Further reduce font size for links */
   }
 }
+
+@media (max-width: 1000px) {
+  .logo {
+    font-size: 2rem;
+  }
+
+  .nav-links a {
+    font-size: 1.5rem;
+  }
+}
