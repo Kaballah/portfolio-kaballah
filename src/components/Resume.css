@@ -93,3 +93,58 @@
   }
 }
 
+/* Media Query for Responsive Design */
+@media (max-width: 1000px) {
+  .resume-container {
+      padding: 5rem 1rem 1rem;
+      height: auto;
+  }
+
+  .resume-container iframe {
+    height: 50vh;
+  }
+
+  .pdf-container {
+      width: 95%;
+      height: 75vh;
+  }
+
+  .download-button {
+      top: 5rem;
+      right: 1rem;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+  }
+
+  .resume-container h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+  }
+}/* Media Query for Responsive Design */
+@media (max-width: 1000px) {
+  .resume-container {
+      padding: 5rem 1rem 1rem;
+  }
+
+  .pdf-container {
+      width: 95%;
+      height: 75vh;
+  }
+
+  .download-button {
+      top: 5rem;
+      right: 1rem;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+  }
+
+  .resume-container h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+  }
+
+  iframe {
+    height: 100px;
+  }
+}
+

@@ -4,6 +4,10 @@
          
   }
 
+*, html {
+    scroll-behavior: smooth;
+}
+
 /* Reset default margin and padding */
 body, html {
     margin: 0;
@@ -14,7 +18,7 @@ body, html {
 
 /* Style for each section */
 .full-height-section {
-    min-height: 100vh; /* Make section fill the viewport height */
+    /* min-height: 100vh; Make section fill the viewport height */
     display: flex;
     align-items: center; /* Center content vertically */
     justify-content: center; /* Center content horizontally */

@@ -133,3 +133,79 @@
   margin-top: 0.5rem;
   font-size: 1rem;
 }
+
+@media (max-width: 1000px) {
+  .about-section {
+      height: auto;
+      min-height: 100vh;
+      /* padding-top: 5rem; */
+  }
+
+  /* Adjust background for mobile */
+  .about-section::before,
+  .about-section::after {
+      width: 100%;
+      height: 50%;
+      background-color: var(--color-soft-platinum);
+      /* background-blend-mode: color; */
+  }
+
+  .about-section::before {
+      top: 0;
+      bottom: 50%;
+  }
+
+  .about-section::after {
+      top: 50%;
+      bottom: 0;
+  }
+
+  /* Stack sections vertically */
+  .about-interests-container {
+      flex-direction: column;
+      /* gap: 2rem; */
+  }
+
+  .about,
+  .interests {
+      padding: 1.5rem;
+      text-align: center;
+      align-items: center;
+      color: var(--color-dark-graphite);
+  }
+
+  /* Adjust languages and frameworks section */
+  .languages-frameworks {
+      /* flex-direction: column; */
+      /* gap: 3rem; */
+      /* padding: 2rem 1rem; */
+  }
+
+  .languages-container,
+  .frameworks-container {
+      align-items: center;
+      width: 100%;
+  }
+
+  .icon-grid {
+      justify-content: center;
+      /* gap: 1.5rem; */
+  }
+
+  .icon-item {
+      font-size: 2.8rem;
+      color: var(--color-dark-graphite);
+  }
+
+  .icon-item span {
+      font-size: 0.9rem;
+  }
+
+  /* Add some spacing between sections */
+  .about,
+  .interests,
+  .languages-container,
+  .frameworks-container {
+      margin-bottom: 2rem;
+  }
+}

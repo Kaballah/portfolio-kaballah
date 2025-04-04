@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+// import PDFViewer from 'pdf-viewer-reactjs';
 import './Resume.css';
 
 function Resume() {
@@ -47,13 +48,22 @@ function Resume() {
       onWheel={handleWheelScroll}
     >
       {/* Removed Resume Title */}
-      <iframe
+      {/* <iframe
         src="/src/assets/Resume.pdf"
-        width="900vw"
-        height="1000px"
+        // width="900vw"
+        // height="1000px"
+        allow="fullscreen"
         title="Resume PDF"
         ref={iframeRef}
-      ></iframe>
+      ></iframe> */}
+      <iframe
+          src={`/src/assets/Resume.pdf`}
+          title="Resume"
+          width="70%"
+          // height="100%"
+        allow="fullscreen"
+        />
+      
       <button className="download-button" onClick={handleDownload}>
         Download <br></br> Resume
       </button>
