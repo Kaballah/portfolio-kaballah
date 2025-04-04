@@ -57,7 +57,7 @@ function Resume() {
         ref={iframeRef}
       ></iframe> */}
       <iframe
-          src={`/src/assets/Resume.pdf`}
+          src={`../assets/Resume.pdf`}
           title="Resume"
           width="70%"
           // height="100%"

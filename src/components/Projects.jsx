@@ -7,7 +7,7 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      image: '/src/assets/Project-1.png',
+      image: '../assets/Project-1.png',
       title: 'Portfolio II',
       description: "A sequel that redefines creativity, Project II is a modern take on portfolio design, blending cutting-edge technologies like React and TypeScript. It's not just a portfolio—it's a statement of innovation and evolution",
       languages: ['React', 'Typescript', 'React', 'Vue'],
@@ -16,7 +16,7 @@ function Projects() {
     },
     {
       id: 2,
-      image: '/src/assets/Project-2.png',
+      image: '../assets/Project-2.png',
       title: 'Portfolio I',
       description: "The origin story of a developer's journey, Project I is a handcrafted masterpiece built with HTML, CSS, and JavaScript. It’s where the adventure began, showcasing the foundation of skills that would shape future creations",
       languages: ['HTML', 'CSS', 'JavaScript'],
@@ -25,7 +25,7 @@ function Projects() {
     },
     {
       id: 3,
-      image: '/src/assets/Project-3.png',
+      image: '../assets/Project-3.png',
       title: 'DAMS',
       description: "A system designed to bring order to chaos, DAMS streamlines doctor appointments with the power of PHP, Laravel, and MySQL. It's a solution that bridges the gap between patients and healthcare providers with efficiency and precision",
       languages: ['PHP', 'Laravel', 'MySQL'],
@@ -34,7 +34,7 @@ function Projects() {
     },
     {
       id: 4,
-      image: '/src/assets/Project-4.png',
+      image: '../assets/Project-4.png',
       title: 'E-Shoes',
       description: "Step into the future of online shopping with E-Shoes, a sleek and responsive e-commerce platform. Built with HTML, CSS, and JavaScript, it delivers a seamless experience for sneaker enthusiasts everywhere",
       languages: ['HTML', 'CSS', 'JavaScript'],
@@ -43,7 +43,7 @@ function Projects() {
     },
     {
       id: 5,
-      image: '/src/assets/Project-5.png',
+      image: '../assets/Project-5.png',
       title: 'P&P Spa',
       description: "A digital oasis for relaxation, P&P Spa is a platform designed to showcase spa services with elegance and simplicity. Built with PHP and Laravel, it’s a serene blend of functionality and beauty",
       languages: ['PHP', 'Laravel', 'MySQL'],

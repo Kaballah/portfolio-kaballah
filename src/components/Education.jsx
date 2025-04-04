@@ -6,10 +6,10 @@ function Education() {
   const [hoveredLevel, setHoveredLevel] = useState(null); // Track hovered level
 
   const levels = [
-    { id: 'primary', name: 'Golden Elites Academy', image: 'src/assets/ges-1.jpg' },
-    { id: 'highschool', name: 'Musingu High School', image: 'src/assets/musingu.jpeg' },
-    { id: 'university', name: 'KCA University', image: 'src/assets/kca.webp' },
-    { id: 'plp', name: 'PLP Academy', image: 'src/assets/plp.jpg' },
+    { id: 'primary', name: 'Golden Elites Academy', image: '../assets/ges-1.jpg' },
+    { id: 'highschool', name: 'Musingu High School', image: '../assets/musingu.jpeg' },
+    { id: 'university', name: 'KCA University', image: '../assets/kca.webp' },
+    { id: 'plp', name: 'PLP Academy', image: '../assets/plp.jpg' },
   ];
 
   const handleTabClick = (levelId) => {
