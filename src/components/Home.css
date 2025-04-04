@@ -1,5 +1,6 @@
 .home-section {
     padding-top: 80px;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between; /* Space between text and image */
@@ -67,5 +68,61 @@
     color: var(--color-silver-mist);
     transform: scale(1.05); /* Slightly enlarge on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
+}
+
+@media (max-width: 1000px) {
+    .home-section {
+        flex-direction: column; /* Stack text and image vertically */
+        padding: 2rem; /* Add padding for smaller screens */
+        text-align: center; /* Center-align content */
+        color: var(--color-dark-graphite); /* Light text on dark background */
+        background: var(--color-cool-pewter) !important;
+        /* background-blend-mode: color; */
+    }
+
+    .home-content {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center;
+        gap: 10rem;
+    }
+
+    .home-text {
+        max-width: 90%; /* Increase text width for better readability */
+        padding-right: 0; /* Remove right padding since items are stacked */
+        margin: 0 auto; /* Center the text block */
+        display: grid;
+        /* gap: 2rem; */
+    }
+
+    .home-text h1 {
+        font-size: 5rem; /* Reduce heading size */
+        margin-bottom: 1.5rem;
+    }
+
+    .home-text p {
+        font-size: 1.1rem; /* Slightly reduce paragraph size */
+        line-height: 1.4;
+        margin-bottom: 1.5rem;
+    }
+
+    .home-image {
+        max-width: 90%; /* Adjust image container width */
+        text-align: center; /* Center the image */
+    }
+
+    .home-image img {
+        max-width: 400px; /* Reduce maximum width */
+        min-width: 75vw; /* Remove minimum width constraint */
+        width: 100%; /* Make image responsive */
+        max-height: 350px; /* Reduce maximum height */
+        min-height: 40vh; /* Remove minimum height constraint */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .cta-button {
+        padding: 0.7rem 1.3rem; /* Slightly reduce button padding */
+        font-size: 0.95rem; /* Slightly reduce font size */
+    }
+
 }
 

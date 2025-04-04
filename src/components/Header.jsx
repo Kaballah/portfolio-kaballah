@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './Header.css';
-import Home from './Home';
-import About from './About';
-// import Education from './Education';
-// import Projects from './Projects';
-// import Resume from './Resume';
-import Contact from './Contact';
 
 function Header() {
   const [activeSection, setActiveSection] = useState('Home'); // Default to 'Home'
+  const [isNavVisible, setIsNavVisible] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavVisible(!isNavVisible);
+  };
 
   useEffect(() => {
     const sections = document.querySelectorAll('.full-height-section');
@@ -55,9 +54,18 @@ function Header() {
     <>
       <header className="app-header">
         <div className="logo">Kaballah</div>
+        <button
+        className={`hamburger ${isNavVisible ? 'open' : ''}`}
+        onClick={toggleNav}
+        aria-label="Toggle navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
         <nav>
-          <ul className="nav-links">
-            <li>
+          <ul className={`nav-links ${isNavVisible ? 'visible' : ''}`}>
+            <li style={{ animationDelay: '0.1s' }}>
               <a
                 onClick={() => handleNavigation('Home')}
                 className={activeSection === 'Home' ? 'active' : ''}
@@ -65,7 +73,7 @@ function Header() {
                 Home
               </a>
             </li>
-            <li>
+            <li style={{ animationDelay: '0.2s' }}>
               <a
                 onClick={() => handleNavigation('About')}
                 className={activeSection === 'About' ? 'active' : ''}
@@ -73,7 +81,7 @@ function Header() {
                 About
               </a>
             </li>
-            <li>
+            <li style={{ animationDelay: '0.3s' }}>
               <a
                 onClick={() => handleNavigation('Education')}
                 className={activeSection === 'Education' ? 'active' : ''}
@@ -81,7 +89,7 @@ function Header() {
                 Education
               </a>
             </li>
-            <li>
+            <li style={{ animationDelay: '0.4s' }}>
               <a
                 onClick={() => handleNavigation('Resume')}
                 className={activeSection === 'Resume' ? 'active' : ''}
@@ -89,7 +97,7 @@ function Header() {
                 CV
               </a>
             </li>
-            <li>
+            <li style={{ animationDelay: '0.5s' }}>
               <a
                 onClick={() => handleNavigation('Projects')}
                 className={activeSection === 'Projects' ? 'active' : ''}
@@ -97,7 +105,7 @@ function Header() {
                 Projects
               </a>
             </li>
-            <li>
+            <li style={{ animationDelay: '0.6s' }}>
               <a
                 onClick={() => handleNavigation('Contact')}
                 className={activeSection === 'Contact' ? 'active' : ''}

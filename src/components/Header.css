@@ -25,10 +25,12 @@
   display: flex;
   margin: 0;
   padding: 0;
+  backdrop-filter: blur(10px);
 }
 
 .nav-links li {
   margin-left: 1.5rem; /* Spacing between nav items */
+  animation: slideIn 0.5s forwards ease;
 }
 
 .nav-links a {
@@ -73,6 +75,74 @@
   color: var(--color-silver-mist); /* Use Silver Mist on hover */
 }
 
+
+/* Hamburger Icon */
+.hamburger {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  padding: 0.5rem; /* Reduced padding */
+  cursor: pointer;
+  z-index: 1100;
+  position: relative;
+  width: 2rem;
+  height: 1.5rem;
+  right: -80vw;
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  background-color: var(--color-dark-graphite);
+  /* border-radius: 2px; */
+  transition: all 0.3s ease;
+}
+
+.hamburger span:nth-child(1) {
+  width: 50%; /* Short line */
+  top: 0;
+  left: 25%;
+}
+
+.hamburger span:nth-child(2) {
+  width: 100%; /* Long line */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger span:nth-child(3) {
+  width: 75%; /* Medium line */
+  bottom: 0;
+  left: 12.5%;
+}
+
+/* Hamburger Open State */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0; /* Hide the middle line */
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
   .app-header {
@@ -88,24 +158,86 @@
   .nav-links li {
     margin-left: 0; /* Remove left margin for stacked items */
     margin-bottom: 1rem; /* Add space between nav items */
+    animation-delay: var(--animation-delay);
   }
 }
 
 
-/* Add a media query for smaller screens */
+
+/* .nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  width: 100vw;
+  padding: 1rem 0;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
+/* Responsive Styles */
+
+/* Tablet View (768px and below) */
 @media (max-width: 768px) {
   .app-header {
     flex-direction: column; /* Stack items vertically */
     align-items: flex-start; /* Align items to the left */
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger button */
+  }
+
+  .logo {
+    font-size: 1.5rem; /* Reduce logo size */
   }
 
   .nav-links {
+    display: none; /* Hide nav links by default */
     flex-direction: column; /* Stack nav links vertically */
-    margin-top: 1rem; /* Add space above the nav links */
+    /* position: absolute; */
+    top: 100%; /* Position below the header */
+    right: 0;
+    backdrop-filter: blur(10px);
+    /* background-color: rgba(47, 47, 47, 0.9); */
+    width: 100vw; /* Full width */
+    padding: 1rem 0;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  }
+
+  .nav-links.visible {
+    display: flex; /* Show nav links when visible */
   }
 
   .nav-links li {
-    margin-left: 0; /* Remove left margin for stacked items */
-    margin-bottom: 1rem; /* Add space between nav items */
+    margin: 0.5rem 0; /* Add spacing between nav items */
+    text-align: center;
+    animation: slideIn 0.5s forwards ease;
+  }
+
+  .nav-links a {
+    font-size: 1rem; /* Reduce font size for links */
+  }
+}
+
+/* Mobile View (480px and below) */
+@media (max-width: 480px) {
+  .app-header {
+    padding: 0.5rem 1rem; /* Further reduce padding */
+  }
+
+  .logo {
+    font-size: 1.2rem; /* Further reduce logo size */
+  }
+
+  .nav-links {
+    margin-top: 0.5rem; /* Reduce space above nav links */
+  }
+
+  .nav-links a {
+    font-size: 0.9rem; /* Further reduce font size for links */
   }
 }
