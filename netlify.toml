@@ -1,4 +1,17 @@
 [[redirects]]
-from = "/*"
-to = "/Home"
-status = 200
+  from = "/*"
+  to = "/Home"
+  status = 200
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Handle SPA routing
+[[headers]]
+  for = "/*"
+    [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
