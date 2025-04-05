@@ -26,6 +26,7 @@ Visit my portfolio: [kaballah.netlify.app](https://kaballah.netlify.app)
 
 ## 📸 Screenshots
 <details> <summary>Click to expand!</summary>
+    
 ![Home Section](./src/assets/portfolio-1.png)
 
 ![Education Section](./src/assets/portfolio-2.png)
