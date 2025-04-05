@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-// import PDFViewer from 'pdf-viewer-reactjs';
+import resume from '../assets/Resume.pdf';
 import './Resume.css';
 
 function Resume() {
@@ -7,7 +7,7 @@ function Resume() {
   const iframeRef = useRef(null);
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/src/assets/Resume.pdf';
+    link.href = resume;
     link.download = 'resume.pdf'; // Suggest a filename
     document.body.appendChild(link);
     link.click();
@@ -57,7 +57,7 @@ function Resume() {
         ref={iframeRef}
       ></iframe> */}
       <iframe
-          src={`../assets/Resume.pdf`}
+          src={ resume }
           title="Resume"
           width="70%"
           // height="100%"

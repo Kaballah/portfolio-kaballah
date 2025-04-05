@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import ges from "../assets/ges-1.jpg"
+import ges from "../assets/musingu.jpeg"
+import ges from "../assets/kca.webp"
+import ges from "../assets/plp.jpg"
 import './Education.css';
 
 function Education() {
