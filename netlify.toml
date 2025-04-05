@@ -1,11 +1,11 @@
 [[redirects]]
   from = "/*"
-  to = "/Home"
+  to = "/index.html"
   status = 200
 
 [build]
   command = "npm run build"
-  publish = "src"
+  publish = "dist"
 
 # Handle SPA routing
 [[headers]]
