@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ges from ""
 import './Education.css';
 
 function Education() {
