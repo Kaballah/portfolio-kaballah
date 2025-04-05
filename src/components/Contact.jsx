@@ -6,6 +6,12 @@ import emailjs from 'emailjs-com';
 function Contact() {
     const formRef = useRef();
 
+    const generateWhatsAppLink = () => {
+      const phoneNumber = "254769692554"; // Replace with your phone number
+      const message = encodeURIComponent("Hi! I saw your portfolio and would like to connect.");
+      return `https://wa.me/${phoneNumber}?text=${message}`;
+    };
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -61,7 +67,13 @@ function Contact() {
             <a href="https://x.com/mckaballah" target="_blank" title="Let's tweet" rel="noopener noreferrer">
               <FaTwitter />
             </a>
-            <a href="https://whatsapp.com" target="_blank" title="Let's Chat" rel="noopener noreferrer">
+            <a 
+              href={generateWhatsAppLink()}
+              className="whatsapp-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Contact me on WhatsApp"
+            >
               <FaWhatsapp />
             </a>
             <a href="https://instagram.com/_whois.kaballah_" target="_blank" title="Let's Connect" rel="noopener noreferrer">
